@@ -4,21 +4,13 @@ const start = document.querySelector('.loading')
 const headerFadeIn = document.querySelector('.header--inner')
 const keywordFadeIn = document.querySelector('.about--inner .about--keyword')
 
-
 function hidden() {start.classList.add('hidden')}
 function fadeInTitle (){headerFadeIn.classList.add('fade-in')}
 function fadeInKeyword (){keywordFadeIn.classList.add('fade-in')}
 
-
 setTimeout(hidden, 100)
 setTimeout(fadeInTitle, 2000)
 setTimeout(fadeInKeyword, 1000)
-
-
-// svg stroke 값
-// const path = document.querySelector('svg path').getTotalLength();
-// console.log(path)
-
 
 
 
@@ -27,7 +19,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 // 토글버튼 색상 변경
 const toggleBtn = document.querySelector('.toggle')
-
 window.document.addEventListener('scroll', function (e) {
   if(window.scrollY >= 40 ) {
     toggleBtn.classList.add('is-scroll')
@@ -35,7 +26,6 @@ window.document.addEventListener('scroll', function (e) {
     toggleBtn.classList.remove('is-scroll')
   }
 })
-
 
 
 
@@ -115,10 +105,6 @@ function message() {
 
 
 
-
-
-
-
 // 디자인 작업물 모달창
 const designModalOpenBtn = document.querySelectorAll('#d li .list-btn')
 const designModalCloseBtn = document.querySelectorAll('.design--modal .icon-close span.material-symbols-outlined')
@@ -146,7 +132,6 @@ for(let j = 0; j < designModalOpenBtn.length; j++){
 
 
 
-
 // Top button
 let fixButton = document.getElementById("fixed_button");
 fixButton.classList.add("fixed_button_hidden")
@@ -168,7 +153,7 @@ document.addEventListener('scroll', function (event) {
 
 // Top button 색상변경
 ScrollTrigger.create({
-  trigger: '#speech-bubble',
+  trigger: '.speech-bubble',
   // markers : true,
   start : 'top 50%',
   end : 'bottom 0%',

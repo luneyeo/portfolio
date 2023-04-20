@@ -659,7 +659,6 @@
 .resume-item .skills-list .skills-list-item .circle {
   width: 80px;
   aspect-ratio: 1 / 1;
-  text-indent: -9999px;
   background: no-repeat center;
   background-size: 80%;
   transition: all .2s ease;
@@ -685,6 +684,12 @@
 .resume-item .skills-list .skills-list-item .circle.css {
   background-image: url('../img/icon-skills-css3.svg');
   background-size: 55%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+.resume-item .skills-list .skills-list-item .circle.scss {
+  background-image: url('../img/icon-skills-scss.svg');
+  background-size: 70%;
   border: 1px solid var(--color-border);
   background-color: var(--color-white);
 }
@@ -916,110 +921,125 @@
 
 
 
-
+/* Contact */
+#contact {
+  background-color: var(--color-main);
+  color: var(--color-white);
+}
 /* 말풍선 이미지 */
-#speech-bubble {
-  min-height: 540px;
+#contact .speech-bubble {
   position: relative;
   background-color: var(--color-main);
   width: 100vw;
-  /* padding-bottom: 70px; */
 }
-#speech-bubble img {
+#contact .speech-bubble img {
   width: 100%;
 }
-#speech-bubble img.mo {
+#contact .speech-bubble img.mo {
   display: none;
 }
 
-@media (max-width : 1200px) {
-  #speech-bubble {
-    min-height: 310px;
-}
-}
-
-
-
-@media (max-width : 768px) {
-  #speech-bubble {
-    min-height: 280px;
-  }
-  #speech-bubble img.pc {
-    display: none;
-  }
-    #speech-bubble img.mo {
-    display: block;
-    width: 100%;
-  }
-}
-@media (max-width : 480px) {
-  #speech-bubble {
-    min-height: 145px;
-  }
-}
-
-
-
-
-
-
-
-
-
-/* Contact */
-#contact {
-  padding: 54px 100px;
-  background-color: var(--color-main);
-  color: var(--color-white);
-}
+/* contact 텍스트 영역 */
 #contact .contact--inner {
+  padding: 54px 100px 0px;
   text-align: center;
 }
 
-#contact .contact--inner .contact--title {
+#contact .contact--inner .email {
   margin: 20px 0;
+  padding: 0;
+  background-color: transparent;
 }
-#contact .contact--inner .contact--title a {
+#contact .contact--inner .email a {
   font-size: 3rem;
   color: var(--color-white);
   display: inline-block;
-  padding-bottom: 12px;
   border-bottom: 2px solid transparent;
   transition: .3s linear;
 }
 
 @media (hover: hover) {
-  #contact .contact--inner .contact--title a:hover {
+  #contact .contact--inner .email a:hover {
     border-bottom: 2px solid;
   }
 }
 
 @media (max-width: 1380px) {
-  #contact {
-    padding: 54px 40px;
+  #contact .contact--inner {
+    padding: 54px 40px 0px;
   }
 }
 
 @media (max-width: 768px) {
-  #contact {
-    padding: 40px;
+  #contact .speech-bubble img.pc {
+    display: none;
   }
-  #contact .contact--inner .contact--title {
-    margin: 16px 0;
+  #contact .speech-bubble img.mo {
+    display: block;
+    width: 100%;
   }
-  #contact .contact--inner .contact--title a {
+  #contact .contact--inner {
+    padding: 40px 40px 0;
+  }
+  #contact .contact--inner .email {
+    margin: 10px 0;
+  }
+  #contact .contact--inner .email a {
     display: inline;
     font-size: 2rem;
     padding-bottom: 0px;
   }
 }
 
-@media (max-width: 480px) {
-  #contact .contact--inner p {
-    font-size: 1.3rem;
-  }
+
+
+
+
+/* Footer */
+#footer {
+  background-color: var(--color-main);
+}
+.footer--inner {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 40px 100px;
+}
+.footer--inner ul {
+  display: flex;
+}
+.footer--inner ul li {
+  width: 60px;
+}
+.footer--inner a {
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: url("/img/github.svg") no-repeat center;
+  background-size: 80%;
+  transition: .2s linear;
 }
 
+@media (hover: hover) {
+  .footer--inner a:hover {
+    background-size: 85%;
+  }
+}
+@media (max-width: 1380px) {
+  #footer .footer--inner {
+    padding: 40px 40px;
+  }
+}
+@media (max-width: 768px) {
+  #footer .footer--inner {
+    padding: 24px 40px;
+  }
+  .footer--inner ul {
+    justify-content: center;
+  }
+  .footer--inner ul li {
+    width: 46px;
+  }
+}
 
 
 
@@ -1174,13 +1194,6 @@
   }
 }
 
-
-
-
-
-
-
-
 /* 모달창 클릭시 나타나는 전체 화면 shadow */
 .modal-bg{
   position: fixed;
@@ -1198,12 +1211,6 @@
   visibility: inherit;
   opacity: 1;
 }
-
-
-
-
-
-
 
 
 

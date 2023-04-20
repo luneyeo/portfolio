@@ -39,9 +39,9 @@
 
 <body>
   <div id="wrap">
-    <!-- test -->
     <!-- Loading -->
     <div class="loading"></div>
+
     <!-- 헤더 -->
     <header id="header">
       <div class="header--inner">
@@ -246,25 +246,44 @@
             <div><strong>Skills</strong></div>
             <ul class="skills-list">
               <li class="skills-list-item">
-                <div class="circle ps">Photoshop</div>
+                <div class="circle ps">
+                  <span class="blind">포토샵</span>
+                </div>
               </li>
               <li class="skills-list-item">
-                <div class="circle ai">Illustrator</div>
+                <div class="circle ai">
+                  <span class="blind">일러스트레이터</span>
+                </div>
               </li>
               <li class="skills-list-item">
-                <div class="circle pr">Premiere Pro</div>
+                <div class="circle pr">
+                  <span class="blind">프리미어 프로</span>
+                </div>
               </li>
               <li class="skills-list-item">
-                <div class="circle html">HTML</div>
+                <div class="circle html">
+                  <span class="blind">HTML</span>
+                </div>
               </li>
               <li class="skills-list-item">
-                <div class="circle css">CSS</div>
+                <div class="circle css">
+                  <span class="blind">CSS</span>
+                </div>
               </li>
               <li class="skills-list-item">
-                <div class="circle js">Javascript</div>
+                <div class="circle scss">
+                  <span class="blind">SCSS</span>
+                </div>
               </li>
               <li class="skills-list-item">
-                <div class="circle jquery">Javascript</div>
+                <div class="circle js">
+                  <span class="blind">자바스크립트</span>
+                </div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle jquery">
+                  <span class="blind">제이쿼리</span>
+                </div>
               </li>
             </ul>
           </li>
@@ -377,21 +396,34 @@
       </div>
     </section>
 
-    <!-- 말풍선 이미지 -->
-    <div id="speech-bubble">
-      <img src="./img/bg/speech-bubble.png" alt="말풍선 이미지" class="pc">
-      <img src="./img/bg/m_speech-bubble.png" alt="말풍선 이미지" class="mo">
-    </div>
-      <!-- Contact -->
-    <footer id="contact">
+    <!-- 네번째 콘택트 -->
+    <section id="contact">
+      <!-- 말풍선 이미지 -->
+      <div class="speech-bubble">
+        <img src="./img/bg/speech-bubble.png" alt="말풍선 이미지" class="pc">
+        <img src="./img/bg/m_speech-bubble.png" alt="말풍선 이미지" class="mo">
+      </div>
+      <!-- contact 텍스트 영역 -->
       <div class="contact--inner">
         <p class="thank-you">Thank you for wacthing :)</p>
-        <div class="contact--title">
-          <a href="mailto:ssyeo1204@gmail.com">ssyeo1204@gmail.com</a>
-        </div>
+        <button class="email"><a href="mailto:ssyeo1204@gmail.com" title="이메일 보내기">ssyeo1204@gmail.com</a></button>
         <p>&copy; <span class="this-year"></span> Yeo Sugyeong. All right reserved.</p>
       </div>
+    </section>
+
+    <!-- footer -->
+    <footer id="footer">
+      <div class="footer--inner">
+        <ul>
+          <li>
+            <a href="https://github.com/luneyeo" target="_blank" title="깃허브 바로가기" class="github">
+            <span class="blind">깃허브</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </footer>
+
 
     <!-- 디자인 리스트모달창 -->
     <div class="">

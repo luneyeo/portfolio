@@ -13,6 +13,7 @@ html {
   --color-main-bg : #d4eaff;
   --color-grey : #717171;
   --color-light-grey : #aaa;
+  --color-yellow : #ffdd31;
   --color-border : #eee;
   --color-hover : #eee;
   --color-hover-bg : rgba(0, 130, 252, .7);
@@ -52,7 +53,7 @@ strong {font-weight: bold;}
 }
 
 ::selection {
-  background: var(--color-main);
+  background: var(--color-yellow);
   color: var(--color-white);
 }
 
