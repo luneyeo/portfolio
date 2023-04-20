@@ -1,0 +1,64 @@
+/* 폰트 */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+
+  --color-black : #222;
+  --color-white : #fff;
+  --color-ivory : #f1f2f6;
+  --color-main : #0082fc;
+  --color-main-bg : #d4eaff;
+  --color-grey : #717171;
+  --color-light-grey : #aaa;
+  --color-border : #eee;
+  --color-hover : #eee;
+  --color-hover-bg : rgba(0, 130, 252, .7);
+  --color-box-shadow : 0 0 6px rgba(0, 0, 0, .2);
+  --color-bg-shadow : rgba(0, 0, 0, .3);
+
+}
+
+html.fixed {position: fixed;}
+body,h1,h2,h3,h4 {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은고딕', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  color: var(--color-black);
+  font-weight: normal;
+  letter-spacing: -1px;
+  word-break: keep-all;
+}
+body {overflow-x: hidden;}
+a {text-decoration: none;color: var(--color-black);}
+img {border: none; display:block;}
+button {border: none;}
+strong {font-weight: bold;}
+.circle {border-radius: 50%;}
+.blind {
+  position: absolute;
+  text-indent: -9999px;
+  font-size: 1.6rem;
+}
+
+.material-symbols-outlined {
+  font-size: 38px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::selection {
+  background: var(--color-main);
+  color: var(--color-white);
+}
+
+
+/* 페이지 시작 */
+#wrap {
+  width: 100%;
+}
+

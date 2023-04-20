@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포트폴리오</title>
+
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="여수경 포트폴리오" />
+  <meta property="og:description" content="여수경의 포트폴리오입니다 :)" />
+  <meta property="og:image" content="./img/og-favicon.png" />
+  <meta property="og:url" content="http://luneyeo.kr" />
+
+
+  <!-- CSS 초기화 -->
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/portfolio.css">
+  <link rel="icon" href="./img/favicon.png">
+  
+  <!-- AOS 라이브러리 불러오기-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+  <script defer src="./js/common.js"></script>
+
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- Top 영역 -->
+    <section class="top">
+      <div class="top--inner">
+        <div class="top--contents">
+          <p>Clone Coding</p>
+          <h2>에어비앤비 홈페이지 클론코딩</h2>
+        </div>
+        <!-- top 이미지 영역 -->
+        <div class="top-image pc">
+          <img src="../img/pub02.jpg" alt="에어비앤비 목업 이미지">
+        </div>
+        <div class="top-image mobile">
+          <img src="../img/m_pub02.jpg" alt="에어비앤비 목업 이미지">
+        </div>  
+      </div>
+    </section>
+    <!-- 텍스트 설명 영역 -->
+    <section class="bottom">
+      <div class="bottom--inner">
+        <div data-trigger class="bottom--contents">
+          <h3 class="title">에어비앤비 홈페이지 클론코딩</h3>
+          <ul class="info-list">
+            <li>
+              <strong class="">Keyword</strong>
+              <p>#반응형 #슬라이드 #json #모달창</p>
+            </li>
+            <li>
+              <strong>Tool</strong>
+              <p>Html, CSS, Javascript</p>
+            </li>
+          </ul>
+          <div class="cont">
+            기존 사이트의 메인페이지, 위시리스트 페이지, 로그인페이지를 클론코딩했습니다. Swiper 플러그인을 이용하여 숙소 카테고리 슬라이드와 숙소 이미지 슬라이드를 구현했습니다. 숙소 리스트는 JSON 데이터를 가져와 html에 출력했고 언어와 지역, 통화 리스트도 JSON 데이터를 이용하여 출력했습니다.
+          </div>
+          <div class="btn-items">
+            <div class="btn" onclick="window.open('./airbnb/index.html')">
+              <span>사이트 바로가기</span>
+              <span class="material-symbols-outlined">
+                trending_flat
+              </span>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- footer -->
+    <footer id="footer">
+      <p>&copy; <span class="this-year"></span> Yeo Sugyeong. All right reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

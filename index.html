@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>여수경 포트폴리오</title>
+
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="여수경 포트폴리오" />
+  <meta property="og:description" content="여수경의 포트폴리오입니다 :)" />
+  <meta property="og:image" content="http://luneyeo.kr/img/og-favicon.png"/>
+  <meta property="og:url" content="http://luneyeo.kr" />
+
+
+  <!-- CSS 초기화 -->
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" href="./img/favicon.png">
+
+  <!-- GSAP -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- 스크롤 트리거 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.6/ScrollTrigger.min.js" integrity="sha512-+LXqbM6YLduaaxq6kNcjMsQgZQUTdZp7FTaArWYFt1nxyFKlQSMdIF/WQ/VgsReERwRD8w/9H9cahFx25UDd+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>  <!-- Js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/scroll-behavior-polyfill@2.0.13/dist/index.min.js"></script>
+  
+  <!-- Js -->
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <script defer src="./js/common.js"></script>
+  <script defer src="./js/index.js"></script> 
+</head>
+
+<body>
+  <div id="wrap">
+    <!-- test -->
+    <!-- Loading -->
+    <div class="loading"></div>
+    <!-- 헤더 -->
+    <header id="header">
+      <div class="header--inner">
+        <!-- pc버전 헤더 -->
+        <div class="header--items pc">
+          <a href="#about" class="btn about">
+            <div>ABOUT</div>
+            <div>ABOUT</div>
+          </a>
+          <a href="#resume" class="btn resume">
+            <div>RESUME</div>
+            <div>RESUME</div> 
+          </a>
+          <a href="#portfolio" class="btn">
+            <div>PORTFOLIO</div>
+            <div>PORTFOLIO</div>
+          </a>
+          <a href="#contact" class="btn">
+            <div>CONTACT</div>
+            <div>CONTACT</div>
+          </a>
+        </div>
+        <!-- 모바일 버전 헤더 -->
+        <div class="header--items mo">
+          <div class="toggle">
+            <div class="toggle--btn"></div>
+            <div class="toggle--btn"></div>
+            <div class="toggle--btn"></div>
+          </div>
+          <nav class="toggle-menu">
+            <a href="#about" class="btn about">
+              ABOUT
+            </a>
+            <a href="#resume" class="btn resume">
+              RESUME
+            </a>
+            <a href="#portfolio" class="btn">
+              PORTFOLIO
+            </a>
+            <a href="#contact" class="btn">
+              CONTACT
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- 첫번째 어바웃 -->
+    <section id="about" class="about-arae">
+      <div class="about--inner">
+        <div class="about--keyword">
+          <!-- 키워드 말풍선 -->
+          <ul class="keyword-items">
+            <li class="item item01">
+              수영
+              <img src="./img/swim.png" alt="">
+            </li>
+            <li class="item item02">
+              유튜브 러버
+              <img src="./img/beating-heart.png" alt="">
+            </li>
+            <li class="item item03">
+              INTJ
+              <img src="./img/woman-technologist.png" alt="">
+            </li>
+            <li class="item item04">
+              스포츠 덕후
+              <img src="./img/baseball.png" alt="">
+            </li>
+            <li class="item item05">
+              뮤지컬 덕후
+              <img src="./img/dance.png" alt="">
+            </li>
+            <li class="item item06">
+              결정에 신중한 타입
+              <img src="./img/thinking-face.png" alt="">
+            </li>
+            <li class="item item07">
+              좌우명 '후회해도 해보자!'
+              <img src="./img/rock.png" alt="">
+            </li>
+          </ul>
+          <div class="keyword--face"></div>
+          <div class="scroll-down">
+            scroll down
+            <span class="material-symbols-outlined">
+              expand_more
+            </span>  
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 두번째 이력 -->
+    <section id="resume" class="resume-area" aria>
+      <div class="resume--inner">
+        <h2 class="resume--title">
+          RESUME
+        </h2>
+        <ul class="resume--container">
+          <!-- EXPERIENCE 영역 -->
+          <li class="resume-item exp">
+            <div><strong>Experience</strong></div>
+            <ul class="exp-list">
+              <li class="exp-list-item">
+                <div class="item-top">
+                  <div class="item-top-icon">
+                    <img src="./img/icon-school.png" alt="">
+                  </div>
+                  <div class="item-top-txt">
+                    <p class="date">2015.03 ~ 2019.02</p>
+                    <p>순천대학교 영상디자인학과 졸업</p>
+                  </div>
+                </div>
+                <ul class="item-bottom">
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-trophy.png" alt="">
+                    </div>
+                    <p>2016년 클린콘텐츠 국민운동본부 UCC 공모전 대상</p>
+                  </li>
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-trophy.png" alt="">
+                    </div>
+                    <p>2016년 순천대학교 언론사, ACE사업단 UCC 공모전 대상</p>
+                  </li>
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-trophy.png" alt="">
+                    </div>
+                    <p>2017년 도이첸 기업 광고 UCC 공모전 대상</p>
+                  </li>
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-trophy.png" alt="">
+                    </div>
+                    <p>2017년 라이나정선기재단 UCC 공모전 입상</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="exp-list-item">
+                <div class="item-top">
+                  <div class="item-top-icon">
+                    <img src="./img/icon-work.png" alt="">
+                  </div>
+                  <div class="item-top-txt">
+                    <p class="date">2019.10 ~ 2019.12</p>
+                    <p>(주)타라스페이스 디자이너 인턴</p>
+                  </div>
+                </div>
+                <ul class="item-bottom">
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-runner.png" alt="">
+                    </div>
+                    <p>문화체육관광부 2019 청년디자이너 인턴십</p>
+                  </li>
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-desktop.png" alt="">
+                    </div>
+                    <p>공공디자인 공모 제안서 작성</p>
+                  </li>
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-desktop.png" alt="">
+                    </div>
+                    <p>영광 산림박물관 전시패널 디자인</p>
+                  </li>
+                </ul>
+              </li>
+              <li class="exp-list-item" >
+                <div class="item-top">
+                  <div class="item-top-icon">
+                    <img src="./img/icon-work.png" alt="">
+                  </div>
+                  <div class="item-top-txt">
+                    <p class="date">2020.03 ~ 2022.06</p>
+                    <p>(주)라온마케팅 디자이너 근무</p>
+                  </div>
+                </div>
+                <ul class="item-bottom">
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-desktop.png" alt="">
+                    </div>
+                    <p>네이버 스마트스토어 운영 및 관리</p>
+                  </li>
+                  <li>
+                    <div class="icon-emoji">
+                      <img src="./img/icon-desktop.png" alt="">
+                    </div>
+                    <p>담당 업체 이벤트, 모비온 배너 제작</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <!-- SKILLS 영역 -->
+          <li class="resume-item skills">
+            <div><strong>Skills</strong></div>
+            <ul class="skills-list">
+              <li class="skills-list-item">
+                <div class="circle ps">Photoshop</div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle ai">Illustrator</div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle pr">Premiere Pro</div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle html">HTML</div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle css">CSS</div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle js">Javascript</div>
+              </li>
+              <li class="skills-list-item">
+                <div class="circle jquery">Javascript</div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 세번째 포트폴리오 -->
+    <section id="portfolio" class="portfolio-area">
+      <div class="portfolio--inner">
+        <h2 class="portfolio--title">PORTFOLIO</h2>
+        <!-- 작업물 리스트 -->
+        <div class="portfolio--container">
+          <!-- 작업물 메뉴탭 -->
+          <ul class="portfolio-menuTab">
+            <li class="publising is_on">
+              <a href="#p" class="btn">웹 퍼블리싱</a>
+            </li>
+            <li class="design">
+              <a href="#d" class="btn">디자인</a>
+            </li>
+          </ul>
+          <div class="portfolio-list">
+            <!-- 퍼블리싱 -->
+            <li id="p" class="pub-list item">
+              <a href="./neolook.html" target="_blank" class="list-btn pub01">
+                <div class="list-bg">
+                  <span>네오룩 홈페이지 리디자인</span>
+                  <span>#반응형 #슬라이드 #디자인</span>
+                </div>
+                <img src="../img/thumbnail/pub01.jpg" alt="네오룩 홈페이지 리디자인 썸네일">
+              </a>
+              <a href="./airbnb.html" target="_blank" class="list-btn pub02">
+                <div class="list-bg">
+                  <span>에어비앤비 홈페이지 클론코딩</span>
+                  <span>#반응형 #슬라이드 #JSON #모달창</span>
+                </div>
+                <img src="../img/thumbnail/pub02.jpg" alt="에어비앤비 홈페이지 클론코딩 썸네일">
+              </a>
+              <a href="./twosome.html" target="_blank" class="list-btn pub03">
+                <div class="list-bg">
+                  <span>투썸플레이스 홈페이지 클론코딩</span>
+                  <span>#슬라이드 #GSAP</span>
+                </div>
+                <img src="../img/thumbnail/pub03.jpg" alt="투썸플레이스 홈페이지 클론코딩 썸네일">
+              </a>
+              <a href="./seoulmilk/index.html" target="_blank" class="list-btn pub04">
+                <div class="list-bg">
+                  <span>서울우유 홈페이지 리디자인</span>
+                  <span>#SCSS #반응형 #슬라이드</span>
+                </div>
+                <img src="../img/thumbnail/pub04.png" alt="서울우유 홈페이지 리디자인 썸네일">
+              </a>
+            </li>
+            <!-- 디자인 -->
+            <ul id="d" class="design-list item">
+              <!-- 디자인 리스트 1번 -->
+              <li>
+                <a href="#d1" class="list-btn design01">
+                  <div class="list-bg">
+                    <span>영광 산림박물관 패널</span>
+                    <span>#인쇄디자인</span>
+                  </div>
+                  <img src="../img/thumbnail/design01.jpg" alt="영광 산림박물관 패널 썸네일">
+                </a>
+              </li>
+              <!-- 디자인 리스트 2번 -->
+              <li>
+                <a href="#d2" class="list-btn design02">
+                  <div class="list-bg">
+                    <span>음악 어플 디자인</span>
+                    <span>#모바일UI</span>
+                  </div>
+                  <img src="../img/thumbnail/design02.jpg" alt=">음악 어플 디자인 썸네일">
+                </a>
+              </li>
+              <!-- 디자인 리스트 3번 -->
+              <li>
+                <a href="#d3" class="list-btn design03">
+                  <div class="list-bg">
+                    <span>졸업작품</span>
+                    <span>#편집디자인</span>
+                  </div>
+                  <img src="../img/thumbnail/design03.jpg" alt="졸업작품 썸네일">
+                </a>
+              </li>
+              <!-- 디자인 리스트 4번 -->
+              <li>
+                <a href="#d4" class="list-btn design04">
+                  <div class="list-bg">
+                    <span>하모 샤브샤브 상세페이지</span>
+                    <span>#웹디자인</span>
+                  </div>
+                  <img src="../img/thumbnail/design04.jpg" alt="하모 샤브샤브 상세페이지 썸네일">
+                </a>
+              </li>
+              <!-- 디자인 리스트 5번 -->
+              <li>
+                <a href="#d5" class="list-btn design05">
+                    <div class="list-bg">
+                      <span>G마켓 프로모션 상세페이지</span>
+                      <span>#웹디자인</span>
+                    </div>
+                    <img src="../img/thumbnail/design05.jpg" alt="G마켓 프로모션 상세페이지 썸네일">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 말풍선 이미지 -->
+    <div id="speech-bubble">
+      <img src="./img/bg/speech-bubble.png" alt="말풍선 이미지" class="pc">
+      <img src="./img/bg/m_speech-bubble.png" alt="말풍선 이미지" class="mo">
+    </div>
+      <!-- Contact -->
+    <footer id="contact">
+      <div class="contact--inner">
+        <p class="thank-you">Thank you for wacthing :)</p>
+        <div class="contact--title">
+          <a href="mailto:ssyeo1204@gmail.com">ssyeo1204@gmail.com</a>
+        </div>
+        <p>&copy; <span class="this-year"></span> Yeo Sugyeong. All right reserved.</p>
+      </div>
+    </footer>
+
+    <!-- 디자인 리스트모달창 -->
+    <div class="">
+      <!-- 디자인 1번 모달창 -->
+      <div class="design--modal design01--modal" id="d1">
+        <div class="icon-close">
+          <span class="material-symbols-outlined">close</span>
+          <span class="blind">모달창 닫기</span>
+        </div>
+        <div class="tit">영광 산림박물관 패널디자인</div>
+        <div class="txt">
+          박물관에 전시할 정보전달 목적으로 패널 제작했습니다. <br/>'산림자원의 활용'이라는 주제로 식목일의 정의부터 각 시대별로 시행된 산림정책과 사방사업까지 자료조사 및 편집 디자인 작업을  <br/> 진행했습니다. 
+        </div>
+        <div class="tool">
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+        </div>
+        <img src="./img/design01_cont.jpg" alt="영광 산림박물관 패널디자인 작업물">
+      </div>
+      <!-- 디자인 2번 모달창 -->
+      <div class="design--modal design02--modal" id="d2">
+        <div class="icon-close">
+          <span class="material-symbols-outlined">close</span>
+          <span class="blind">모달창 닫기</span>
+        </div>
+        <div class="tit">음악 어플리케이션 디자인</div>
+        <div class="txt">
+          음악 어플리케이션 UI 디자인 작업물입니다. <br/> 가수 정보 페이지와 음악 추천 페이지, 음악 재생 페이지를 작업했습니다.
+        </div>
+        <div class="tool">
+          <span>Illustrator</span>
+          <span>Photoshop</span>
+        </div>
+        <img src="./img/design02_cont.jpg" alt="음악 어플리케이션 디자인 작업물">
+      </div>
+      <!-- 디자인 3번 모달창 -->
+      <div class="design--modal design03--modal" id="d3">
+        <div class="icon-close">
+          <span class="material-symbols-outlined">close</span>
+          <span class="blind">모달창 닫기</span>
+        </div>
+        <div class="tit">졸업작품</div>
+        <div class="txt">
+          <strong>개인작업</strong> <br/>
+          전남 화순의 운주사를 주제로 한 잡지입니다. 네 가지의 주제로 기획했고 운주사의 설명, 정확하지않은 창건설화에 대한 상상력을 Cinema 4d로 표현하여 만든 이미지, 운주사에 있는 불상과 석탑에 친근감을 느낌 저만의 생각을 담아 표현하여 제작했습니다.
+          <br/> <br/>
+          <strong>팀작업</strong> <br/>
+          ‘빛과 어둠’이라는 주제로 진행되었습니다. 저는 자연이 가지고 있는 빛과 어둠을 개인 주제로 잡고 ‘해와 달’, 그리고 달의 빛과 어둠을 표현했습니다. 선조들이 달을 보고 토끼라고 떠올렸던 부분은 ‘달의 바다’입니다. 달의 바다는 달의 지형 가운데 짙은 검은색으로 <br/> 보이는 평원 지대를 일컫습니다. ‘달의 바다’라는 소재와 ‘사람들이 보는 달의 무늬’라는 소재를 혼합하여 스토리를 만들어 일러스트로 표현했습니다.      </div>
+        <div class="tool">
+          <span>Photoshop</span>
+          <span>Illustrator</span>
+          <span>Indesign</span>
+          <span>Cinema 4D</span>
+        </div>
+        <div class="pdf">
+          <p>표지를 클릭하면 자세하게 확인 가능합니다 :)</p>
+          <div class="pdf-items">
+            <a href="./img/desgin03-1.pdf" title="개인 졸업작품 pdf 열기" target="_blank" class="pdf-item"></a>
+            <a href="./img/design03-2.pdf" title="팀 졸업작품 pdf 열기"  target="_blank" class="pdf-item"></a>
+          </div>
+        </div>
+      </div>
+      <!-- 디자인 4번 모달창 -->
+      <div class="design--modal design04--modal" id="d4">
+        <div class="icon-close">
+          <span class="material-symbols-outlined">close</span>
+          <span class="blind">모달창 닫기</span>
+        </div>
+        <div class="tit">하모샤브샤브 상세페이지</div>
+        <div class="txt">
+          가상의 상품 판매 상세페이지 작업물입니다.<br/>
+          청결하고 깔끔한 이미지를 주기로 글자수를 최대한으로 줄여 사진 프레임을 크게 넣는 방향으로 기획을 했고,<br>
+          검정과 파란색 두 색을 메인으로 사용하여 물/바다가 연상되게끔 기획했습니다.
+        </div>
+        <div class="tool">
+          <span>Photoshop</span>
+        </div>
+        <img src="./img/design04_cont.jpg" alt="하모샤브샤브 상세페이지 작업물">
+      </div>
+      <!-- 디자인 5번 모달창 -->
+      <div class="design--modal design05--modal" id="d5">
+        <div class="icon-close">
+          <span class="material-symbols-outlined">close</span>
+          <span class="blind">모달창 닫기</span>
+        </div>
+        <div class="tit">G마켓 프로모션 상세페이지</div>
+        <div class="txt">
+          경자년에 어울리는 가상의 프로모션 상세페이지 작업물입니다. <br/>
+          동물 ‘쥐’와 알파벳 ‘G’의 발음 요소를 이용하여 타이틀을 정했고, 쿠폰 증정 이벤트와 응모 이벤트 두 가지로 구성해서 작업했습니다.
+        </div>
+        <div class="tool">
+          <span>Photoshop</span>
+          <span>Illustrator</span>
+        </div>
+        <img src="./img/design05_cont.jpg" alt="G마켓 프로모션 상세페이지 작업물">
+      </div>
+    </div>
+
+    <!-- 모달창 shadow -->
+    <div class="modal-bg"></div>
+
+    <!-- Top button -->
+    <div id="fixed_button" class="fixed_button">
+      <span class="material-symbols-outlined">expand_less</span>
+      <span class="blind">클릭시 맨 위로 이동</span>
+    </div>
+  </div>
+</body>
+
+</html>

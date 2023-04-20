@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>에어비앤비</title>
+
+
+  <!-- css 초기화 -->
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;500;700&display=swap" rel="stylesheet">
+  <!--Google Material Icons-->  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+  <!-- Swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="icon" href="./img/favicon.png">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script defer type="module" src="./js/common.js"></script>
+  <script defer type="module" src="./js/index.js"></script>
+
+</head>
+<body>
+
+  <!-- header 헤더 -->
+  <header id="header">
+    <div class="hWrap">
+      <!-- header--top / pc -->
+      <div class="header--top">
+        <ul class="hInner">
+          <li class="logo">
+            <a href="./index.html" title="에어비앤비 홈페이지가기"></a>
+          </li>
+          <li class="reservation btn">
+            <ul>
+              <li><a href="javascript:;">어디든지</a></li>
+              <span class="line"></span>
+              <li><a href="javascript:;">언제든 일주일</a></li>
+              <span class="line"></span>
+              <li>
+                <a href="javascript:;">게스트 추가</a>
+                <div>
+                  <a href="javascript:;" class="icon icon-search">
+                    <span class="material-symbols-outlined">search</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li class="hInner-right">
+            <div class="hInner-right-left">
+              <a class="your-airbnb">당신의 공간을 에어비앤비하세요</a>
+              <a href="javascript:;" class="icon icon-lang lang-btn">
+                <span class="material-symbols-outlined">language</span>
+                <span class="blind">언어 및 통화 보기</span>
+              </a>
+            </div>
+            <div class="profile btn">
+              <div href="javascript:;" class="icon icon-burger">
+                <span class="material-symbols-outlined">menu</span>
+                <span class="blind">메뉴</span>
+              </div>
+              <div class="icon icon-profile">
+                <span class="material-symbols-outlined">account_circle</span>
+                <span class="blind">회원정보</span>
+              </div>
+
+              <!-- 프로필메뉴 -->
+              <div class="profile-menu">
+                <ul>
+                  <li><a href="./signin.html"><strong>회원가입</strong></a></li>
+                  <li><a href="./signin.html">로그인</a></li>
+                </ul>
+                <div class="line"></div>
+                <ul>
+                  <li><a href="javascript:;">당신의 공간을 에어비앤비하세요</a></li>
+                  <li><a href="javascript:;">체험 호스팅하기</a></li>
+                  <li><a href="javascript:;">도움말</a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <!-- header--top / mobile -->
+      <div class="header--top-m">
+        <div class="inner btn">
+          <div class="search-el">
+            <span class="material-symbols-outlined">
+              search
+            </span>
+          </div>
+          <div class="main-el">
+            <div class="">어디든지</div>
+            <div class="">언제든 일주일 · 게스트 추가</div>
+          </div>
+          <div class="filter-el btn">
+            <span class="material-symbols-outlined">tune</span>
+            <span class="blind">필터</span>
+          </div>
+        </div>
+      </div>
+      <!-- 헤더 탑 흰색 배경 -->
+      <div class="white-box"></div>
+      <!-- 서치 탭 -->
+      <div class="search">
+        <div class="search--tab">
+          <ul class="tab-list">
+            <li class="is_on"><a href="#house-tab" class="tab">숙소</a></li>
+            <li ><a href="#experience-tab" class="tab">체험</a></li>
+            <li ><a href="#online-experience-tab"  class="tab">온라인 체험</a></li>
+          </ul>
+        </div>
+        <div class="search--bar">
+
+          <!-- 숙소 탭 -->
+          <div id="house-tab" class="tab-cont">
+            <!-- 여행지 검색 -->
+            <div class="search--space search--area">
+              <div class="tab-cont-list">
+                <span class="cont-title">여행지</span>
+                <input type="text" placeholder="여행지 검색"/> 
+              </div>
+              <!-- 여행지 검색 모달창 -->
+              <div class="tab-cont-list-modal">
+                <div class="modal-inner">
+                  <div class="modal-title">지역으로 검색하기</div>
+
+                </div>
+              </div>
+            </div>
+            <!-- 체크인 -->
+            <div class="search--checkin search--area grow1">
+              <div class="tab-cont-list">
+                <span class="cont-title">체크인</span>
+                <span>날짜 추가</span>
+              </div>
+              <div class="tab-cont-list-modal"></div>
+            </div>
+            <!-- 체크아웃 -->
+            <div class="search--checkout search--area grow1">
+              <div class="tab-cont-list">
+                <span class="cont-title">체크아웃</span>
+                <span>날짜 추가</span>
+              </div>
+            </div>
+            <!-- 게스트 -->
+            <div class="search--guest search--area">
+              <div class="tab-cont-list">
+                <span class="cont-title">여행자</span>
+                <span>게스트 추가</span>
+              </div>
+                <div class="icon-search">
+                  <span class="material-symbols-outlined">search</span>
+                </div>
+              <div class="tab-cont-list-modal">
+              </div>
+            </div>
+          </div>
+
+          <!-- 체험 탭 -->
+          <div id="experience-tab" class="tab-cont">
+            <!-- 여행지 검색 -->
+            <div class="search--space search--area">
+              <div class="tab-cont-list">
+                <span class="cont-title">여행지</span>
+                <input type="text" placeholder="여행지 검색"/> 
+              </div>
+              <div class="tab-cont-list-modal show">
+              </div>
+            </div>
+            <!-- 날짜 -->
+            <div class="search--checkin search--area grow1">
+              <div class="tab-cont-list">
+                <span class="cont-title">날짜</span>
+                <span>날짜 추가</span>
+              </div>
+              <div class="tab-cont-list-modal"></div>
+            </div>
+            <!-- 게스트 -->
+            <div class="search--guest search--area">
+              <div class="tab-cont-list">
+                <span class="cont-title">여행자</span>
+                <span>게스트 추가</span>
+              </div>
+                <div class="icon-search">
+                  <span class="material-symbols-outlined">search</span>
+                </div>
+              <div class="tab-cont-list-modal">
+              </div>
+            </div>
+          </div>
+
+          <!-- 온라인 체험 탭 -->
+          <div id="online-experience-tab" class="tab-cont" style="cursor: inherit;">
+            :)
+          </div>
+        </div>
+      </div>
+      <!-- header--bottom -->
+      <div class="header--bottom">
+        <div class="gnb">
+          <div class="swiper category-swiper">
+            <ul class="category swiper-wrapper">
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-amazing-views.jpg" alt="" />
+                    <span>최고의 전망</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-a-house.jpg" alt="" />
+                    <span>에이 하우스</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-adapted.jpg" alt="" />
+                    <span>무장애</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-arctic.jpg" alt="" />
+                    <span>북극</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-golf.jpg" alt="" />
+                    <span>골프장</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-hanoks.jpg" alt="" />
+                    <span>한옥</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-beach.jpg" alt="" />
+                    <span>해변 </span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-barn.jpg" alt="" />
+                    <span>헛간</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-dammusi.jpg" alt="" />
+                    <span>담무소</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-desert.jpg" alt="" />
+                    <span>사막</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-design.jpg" alt="" />
+                    <span>디자인</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-trulli.jpg" alt="" />
+                    <span>트롤로</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-windmill.jpg" alt="" />
+                    <span>풍차</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-wine.jpg" alt="" />
+                    <span>와인 농장</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-earthhomes.jpg" alt="" />
+                    <span>지구</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-farm.jpg" alt="" />
+                    <span>농장</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-houseboat.jpg" alt="" />
+                    <span>하우스 보트</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-island.jpg" alt="" />
+                    <span>섬</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-lakenear.jpg" alt="" />
+                    <span>호수 근처</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-landmark.jpg" alt="" />
+                    <span>랜드마크</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-luxe.jpg" alt="" />
+                    <span>Luxe</span>
+                  </a>
+                </li>
+                <li class="swiper-slide">
+                  <a href="javascript:;">
+                    <img src="./img/icon-mension.jpg" alt="" />
+                    <span>저택</span>
+                  </a>
+                </li>
+            </ul>
+            <div class="swiper-button-prev slide-btn">
+              <span class="material-symbols-outlined">chevron_left</span>
+              <span class="blind">이전 카테고리 보기</span>
+            </div>
+            <div class="swiper-button-next slide-btn">
+              <span class="material-symbols-outlined">chevron_right</span>
+              <span class="blind">다음 카테고리 보기</span>
+            </div>
+          </div>
+          <div class="filter">
+            <div class="icon icon-filter">
+              <span class="material-symbols-outlined">tune</span>
+            </div>
+            <span>필터</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- search bg -->
+  <div class="search-bg">
+    <div class="shadow"></div>
+  </div>
+  
+  <!-- main contents -->
+  <main id="main">
+    <ul class="contents">
+      <!-- JS -->
+    </ul>
+  </main>
+
+  <!-- fixed map -->
+  <div id="fixed-map-btn">
+    <div class="map-btn">
+      <span>지도 표시하기</span>
+      <div class="icon icon-map">
+        <span class="material-symbols-outlined">
+          map
+        </span>          
+      </div>
+    </div>
+  </div>
+
+  <!-- footer / pc -->
+  <footer id="footer-pc" class="footer">
+    <div class="footer-top">
+      <div class="footer-top-left">
+        <ul>
+          <li>&copy; <span class="this-year"></span> Airbnb, Inc.</li>
+          <li>개인정보 처리방침</li>
+          <li>이용약관</li>
+          <li>사이트맵</li>
+          <li>한국의 변경된 환불 정책</li>
+          <li>회사 세부정보</li>
+        </ul>
+      </div>
+      <div class="footer-top-right">
+        <div class="lang lang-btn">
+          <div class="icon icon-lang">
+            <span class="material-symbols-outlined">
+              language
+            </span>
+          </div>
+          <span>한국어(KR)</span>
+        </div>
+        <div class="lang-btn">
+          <span>₩ KRW</span>
+        </div>
+        <div class="support">
+          <span>지원 및 참고 자료</span>
+          <div class="icon icon-arrow-up">
+            <span class="material-symbols-outlined">
+              expand_less
+            </span>              
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>
+        웹사이트 제공자: Airbnb Ireland UC, private unlimited company, 
+        8 Hanover Quay Dublin 2, D02 DP23 Ireland | 이사: Dermot Clarke, Killian Pattwell, 
+        Andrea Finnegan | VAT 번호: IE9827384L | 사업자 등록 번호: IE 511825 | 연락처: terms@airbnb.com, 
+        웹사이트, 080-822-0230 | 호스팅 서비스 제공업체: 아마존 웹서비스 | 에어비앤비는 통신판매 중개자로 에어비앤비 플랫폼을 
+        통하여 게스트와 호스트 사이에 이루어지는 통신판매의 당사자가 아닙니다. 에어비앤비 플랫폼을 통하여 예약된 숙소, 체험, 호스트 
+        서비스에 관한 의무와 책임은 해당 서비스를 제공하는 호스트에게 있습니다.
+      </span>
+    </div>
+  </footer>
+
+  <!-- footer / mobile -->
+  <footer id="footer-mo" class="footer">
+    <div class="footer-inner">
+      <a href="./index.html" class="footer-search">
+        <span class="material-symbols-outlined">search</span>
+        <span>둘러보기</span>
+      </a>
+      <a href="./wishlist.html" class="footer-wishlist">
+        <span class="material-symbols-outlined">favorite</span>
+        <span>위시리스트</span>         
+      </a>
+      <a href="./signin.html" class="footer-signin">
+        <span class="material-symbols-outlined">account_circle</span>
+        <span>로그인</span>
+      </a>
+    </div>
+  </footer>
+
+  <!-- 지원 및 참고자료 모달창 -->
+  <div class="support-wrap">
+    <div class="support-modal modal hidden">
+      <div class="support-inner">
+        <div class="icon icon-close">
+          <span class="material-symbols-outlined">
+            close
+          </span>          
+        </div>
+        <div class="support--info">
+          <ul>
+            <li class="depth-01">
+              <a href="javascript:;">에어비앤비 지원</a>
+              <li class="depth-02">
+                <a href="javascript:;">도움말 센터</a>
+                <a href="javascript:;">에어커버</a>
+                <a href="javascript:;">장애인 지원</a>
+                <a href="javascript:;">예약 취소 옵션</a>
+                <a href="javascript:;">에어비앤비의 코로나19 대응 방안</a>
+                <a href="javascript:;">이웃 민원 신고</a>
+              </li> 
+            </li>
+          </ul>
+          <ul>
+            <li class="depth-01">
+              <a href="javascript:;">커뮤니티</a>
+              <li class="depth-02">
+                <a href="javascript:;">Airbnb.org: 재난 구호 숙소</a>
+                <a href="javascript:;">차별 철폐를 위한 노력</a>
+              </li> 
+            </li>
+          </ul>
+          <ul>
+            <li class="depth-01">
+              <a href="javascript:;">호스팅</a>
+              <li class="depth-02">
+                <a href="javascript:;">당신의 공간을 에어비앤비하세요</a>
+                <a href="javascript:;">호스트를 위한 에어커버</a>
+                <a href="javascript:;">호스팅 자료 둘러보기</a>
+                <a href="javascript:;">커뮤니티 포럼 방문하기</a>
+                <a href="javascript:;">책임감 있는 호스팅</a>
+              </li> 
+            </li>
+          </ul>
+          <ul>
+            <li class="depth-01">
+              <a href="javascript:;">에어비앤비</a>
+              <li class="depth-02">
+                <a href="javascript:;">뉴스룸</a>
+                <a href="javascript:;">새로운 기능에 대해 알아보기</a>
+                <a href="javascript:;">에어비앤비 공동창업자의 메시지</a>
+                <a href="javascript:;">채용정보</a>
+                <a href="javascript:;">투자자 정보</a>
+              </li> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 언어, 통화 모달창 -->
+  <div class="lang-wrap">
+    <div class="lang-modal modal hidden">
+      <div class="icon-wrap">
+        <div class="icon icon-close">
+          <span class="material-symbols-outlined">
+            close
+          </span>          
+        </div>
+      </div>
+      <div class="cont-wrap">
+        <div class="tab-list">
+          <div class="active">
+            <a href="#lang--tab-cont" class="tab">
+              언어와 지역
+            </a>
+          </div>
+          <div>
+            <a href="#money--tab-cont" class="tab">통화</a>
+          </div>
+        </div>
+        <div class="cont-list">
+          <ul id="lang--tab-cont" class="tab-cont">
+            <!-- 추천 언어 및 지역 -->
+            <li class="recommend-lang">
+              <div class="tab-cont-title">
+                추천 언어 및 지역
+              </div>
+              <ul class="tab-cont-list">
+                <li class="active">
+                  <a href="javascript:;" class="a">
+                    <span>English</span>
+                    <span>United States</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="javascript:;" class="a">
+                    <span>English</span>
+                    <span>United Kingdom</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- 언어와 지역을 선택하세요 -->
+            <li class="choose-lang">
+              <div class="tab-cont-title">
+                언어와 지역을 선택하세요
+              </div>
+              <ul class="tab-cont-list">
+                <!-- JS / language -->
+              </ul>
+            </li>
+          </ul>
+          <ul id="money--tab-cont" class="tab-cont">
+            <!-- 통화를 선택하세요. -->
+            <li class="choose-currency">
+              <div class="tab-cont-title">
+                통화를 선택하세요
+              </div>
+              <ul class="tab-cont-list">
+                <!-- JS / currency -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 모달창 shadow -->
+  <div class="modal-bg">
+    <div class="shadow"></div>
+  </div>
+
+  <!-- header tab 클릭 / mobile -->
+  <section id="tab-modal">
+    <div class="inner">
+      <!-- tab 영역 -->
+      <div class="tab">
+        <div class="icon-close btn">
+          <span class="material-symbols-outlined">
+            close
+          </span>    
+        </div>
+        <ul class="modal--tab">
+          <li class="active">
+            <a href="#a" class="house tab-btn">숙소</a>
+          </li>
+          <li>
+            <a href="#b" class="experience tab-btn">체험</a>
+          </li>
+        </ul>
+      </div>
+      <!-- list 영역 -->
+      <div class="tab-el">
+        <ul id="a" class="list">
+          <li>
+            <!-- list el 클릭시 -->
+            <div class="list-show">
+              <div class="title">여행지를 알려주세요</div>
+              <div class="search-box">
+                <div class="icon-search">
+                  <span class="material-symbols-outlined">
+                    search
+                  </span>
+                </div>
+                <input type="text" placeholder="여행지 검색">
+              </div>
+              
+              <ul class="space-list">
+                <li class="space-list-el">
+                  <div class="map-img">
+                    <img src="./img/map-world.jpg" alt="">
+                  </div>
+                  <div class="region">유연한 검색</div>
+                </li>
+                <li class="space-list-el">
+                  <div class="map-img">
+                    <img src="./img/map-europe.jpg" alt="">
+                  </div>
+                  <div class="region">유럽</div>
+                </li>
+                <li class="space-list-el">
+                  <div class="map-img">
+                    <img src="./img/map-japan.jpg" alt="">
+                  </div>
+                  <div class="region">일본</div>
+                </li>
+                <li class="space-list-el">
+                  <div class="map-img">
+                    <img src="./img/map-southasia.jpg" alt="">
+                  </div>
+                  <div class="region">동남아시아</div>
+                </li>
+                <li class="space-list-el">
+                  <div class="map-img">
+                    <img src="./img/map-france.jpg" alt="">
+                  </div>
+                  <div class="region">프랑스</div>
+                </li>
+                <li class="space-list-el">
+                  <div class="map-img">
+                    <img src="./img/map-america.jpg" alt="">
+                  </div>
+                  <div class="region">미국</div>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="list-el">
+            <div class="title">날짜</div>
+            <div class="cont-add">날짜 추가</div>
+          </li>
+          <li class="list-el">
+            <div class="title">여행자</div>
+            <div class="cont-add">게스트 추가</div>
+          </li>
+        </ul>
+        <ul id="b" class="list">
+          <li class="list-el">
+            <div class="title">여행지</div>
+            <div class="cont-add">유연한 검색</div>
+          </li>
+          <li class="list-el">
+            <div class="title">날짜</div>
+            <div class="cont-add">날짜 추가</div>
+          </li>
+          <li class="list-el">
+            <div class="title">여행자</div>
+            <div class="cont-add">게스트 추가</div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- footer 영역 -->
+    <footer>
+      <div class="delete">전체 삭제</div>
+      <div class="search-btn">
+        <div class="icon-search">
+          <span class="material-symbols-outlined">
+            search
+          </span>
+        </div>
+        <div class="search-txt">검색</div>
+      </div>
+    </footer>
+  </section>
+
+</body>
+</html>

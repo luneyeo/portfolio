@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네오룩 - 검색 페이지</title>
+
+  <!-- CSS 초기화 -->
+  <link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="icon" href="https://neolook.com/images/favicon-192x192.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <!-- JS -->
+  <!-- Media Jquery -->
+  <script type="text/javascript" src="./js/matchMedia.js"></script>
+  <script type="text/javascript" src="./js/matchMedia.addListener.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script defer src="./js/common.js"></script>
+  <script defer src="./js/search.js"></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <!--상단헤더 시작-->
+    <header class="hWrap">
+      <div class="hInner">
+        <div class="hTop">
+          <h1 class="logo">
+            <a href="./index.html" title="네오룩 홈페이지가기">
+              <img src="./img/logo.png" alt="네오룩 로고" />
+            </a>
+          </h1>
+          <div class="topMenu">
+            <a href="javascript:;" class="toggle">
+              <span class="blind">메뉴 보기</span>
+              <div class="toggle--btn"></div>
+            </a>
+            <ul id="layer" class="menu_toggle">
+              <li><a href="javascript:;" title="전시회">전시회</a></li>
+              <li><a href="javascript:;" title="공모 및 행사">공모 및 행사</a></li>
+              <li><a href="javascript:;" title="매거진">매거진</a></li>
+              <li><a href="javascript:;" title="커뮤니티">커뮤니티</a></li>
+              <li><a href="./search.html" class="active" title="검색">검색</a></li>
+              <li><a href="./signin.html" class="active" title="로그인 및 회원가입">로그인/회원가입</a></li>
+              <li><a href="javascript:;" title="마이페이지">마이페이지</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="gnb">
+          <ul class="gnb_menu">
+            <li><a href="./search.html" class="active" title="전시회 검색">전시회 검색</a></li>
+            <li><a href="javascript:;" title="공모 및 행사">공모 및 행사</a></li>
+            <li><a href="javascript:;" title="매거진">매거진</a></li>
+            <li><a href="javascript:;" title="커뮤니티">커뮤니티</a></li>
+            <li><a href="./signin.html" class="active" title="마이페이지">마이페이지</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main class="mainWrap">
+      <section id="searchBox" class="searchBox">
+        <!--검색-->
+        <!-- 검색창  -->
+        <div id="searchBox_normal" class="searchBox_normal">
+          <div class="search">
+            <!-- 검색창 -->
+            <div class="search_icon"></div>
+            <input type="text" placeholder="검색어를 입력하세요." class="search_input">
+            <a href="javascript:;" class="search_btn">검색</a>
+          </div>
+          <div class="keywordBox">
+            <!--추천키워드-->
+            <p class="keyword">추천키워드</p>
+            <ul class="keyword_item">
+              <li>#서울</li>
+              <li>#무료전시</li>
+              <li>#어린이</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="main_content" id="main_content">
+        <!--검색 결과-->
+        <div class="exh_content">
+          <!--전시회-->
+          <p class="exh_tit">전시회</p>
+          <ul class="exh_list">
+            <a href="javascript:;" class="search_list">
+              <li>
+                <img src="./img/search-list01.jpg" alt="어제 걸은 길 바로가기">
+                <!-- 카테고리 -->
+                <ul class="list_category">
+                  <li>전시중</li>
+                  <li class="content_tit">어제 걸은 길</li>
+                  <li class="content_txt">한원미술관</br>2022.10.06~2022.12.16</li>
+                </ul>
+              </li>
+            </a>
+            <a href="javascript:;" class="search_list">
+              <li>
+                <img src="./img/search-list02.jpg" alt="우리 시대의 화가 ll 바로가기">
+                <!-- 카테고리 -->
+                <ul class="list_category">
+                  <li>전시중</li>
+                  <li class="content_tit">우리 시대의 화가 ll</li>
+                  <li class="content_txt">큐레이터의 아뜰리에 49</br>2022.04.14~2022.05.20</li>
+                </ul>
+              </li>
+            </a>
+            <a href="javascript:;" class="search_list">
+              <li>
+                <img src="./img/search-list03.jpg" alt="노마드랜드 바로가기">
+                <!-- 카테고리 -->
+                <ul class="list_category">
+                  <li>전시중</li>
+                  <li class="content_tit">노마드랜드</li>
+                  <li class="content_txt">한원미술관</br>2022.06.09~2022.07.29</li>
+                </ul>
+              </li>
+            </a>
+            <a href="javascript:;" class="search_list">
+              <li>
+                <img src="./img/search-list04.webp" alt="REFLECTION 바로가기">
+                <!-- 카테고리 -->
+                <ul class="list_category">
+                  <li>전시중</li>
+                  <li class="content_tit">REFLECTION</li>
+                  <li class="content_txt">초이스아트컴퍼니</br>2022.10.05~2022.11.05</li>
+                </ul>
+              </li>
+            </a>
+          </ul>
+        </div>
+        <div class="event_content">
+          <!--공모 및 행사-->
+          <p class="event_tit">공모 및 행사</p>
+          <ul class="event_list">
+              <a href="javascript:;" class="search_list">
+                <li>
+                  <img src="./img/event-list01.png" alt="신진 작가 공모 바로가기">
+                  <!-- 카테고리 -->
+                  <ul class="list_category">
+                    <li>공모중</li>
+                    <li class="content_tit">신진 작가 공모</li>
+                    <li class="content_txt">신한갤러리</br>2022.11.30</li>
+                  </ul>
+                </li>
+              </a>
+              <a href="javascript:;" class="search_list">
+                <li>
+                  <img src="./img/event-list02.jpg" alt="정부서울청사 전시 공모제 바로가기">
+                  <!-- 카테고리 -->
+                  <ul class="list_category">
+                    <li>공모중</li>
+                    <li class="content_tit">정부서울청사 전시 공모제</li>
+                    <li class="content_txt">정부서울청사갤러리</br>2022.11.18</li>
+                  </ul>
+                </li>
+              </a>
+              <a href="javascript:;" class="search_list">
+                <li>
+                  <img src="./img/event-list03.jpg" alt="예술소통공간 작가 모집 바로가기">
+                  <!-- 카테고리 -->
+                  <ul class="list_category">
+                    <li>공모중</li>
+                    <li class="content_tit">예술소통공간 작가 모집</li>
+                    <li class="content_txt">춘천문화재단</br>2022.10.25</li>
+                  </ul>
+                </li>
+              </a>
+              <a href="javascript:;" class="search_list">
+                <li>
+                  <img src="./img/event-list04.jpg" alt="서리풀 청년아트 전시공모 바로가기">
+                  <!-- 카테고리 -->
+                  <ul class="list_category">
+                    <li>공모중</li>
+                    <li class="content_tit">서리풀 청년아트 전시공모</li>
+                    <li class="content_txt">서리풀청년아트갤러리</br>2022.10.24</li>
+                  </ul>
+                </li>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!--footer-->
+      <footer class="footer">
+        <div class="footer_inner">
+          <div class="corp_area">
+            <ul class="corp_btn">
+              <li><a href="javascript:;">개인정보처리방침</a></li>
+              <li><a href="javascript:;">게재방법 안내</a></li>
+              <li><a href="javascript:;">사이트이용약관</a></li>
+              <li><a href="javascript:;">찾아오시는 길</a></li>
+              <li><a href="javascript:;">메일링 서비스</a></li>
+            </ul>
+            <p class="corp_info">
+              (우)03992 서울 마포구 월드컵북로 4길 24 5층(구 동교동 201-26번지 5층) 네오룩 이미지올로기연구소
+              TEL 02)335-7922 FAX 02)335-7929
+              neo@neolook.com
+            </p>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Top button -->
+      <div class="fixed_button">
+        <span class="material-symbols-outlined">arrow_upward</span>
+        <span class="blind">클릭하면 맨 위로 이동</span>
+      </div>
+
+      <!-- 검색창 고정 -->
+      <div id="searchBox_fix" class="searchBox_fix">
+        <input type="text" placeholder="검색어를 입력하세요." class="searchBox_input">
+        <div class="searchBox_icon"></div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

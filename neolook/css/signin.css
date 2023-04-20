@@ -1,0 +1,167 @@
+
+/* 로그인 */
+.login {
+  max-width: 1060px;
+  margin: 0 auto;
+  width: 330px;
+  padding: 100px 0;
+}
+
+.login .login_tit {
+  width: 100%;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login .login_tab {
+  width: 100%;
+  height: 40px;
+  margin-top: 40px;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--color-black);
+  display: flex;
+  justify-content: space-around;
+}
+.login .login_tab .tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  font-size: 14px;
+}
+.login .login_tab .member {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.login .login_tab .non_member {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+
+/* 회원, 비회원 탭 버튼 */
+.tab {
+  border: none;
+  cursor: pointer;
+}
+
+/* 회원, 비회원 로그인 폼 */
+.login .tabcontent {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.login .tabcontent input {
+  width: 100%;
+  height: 46px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid var(--color-grey);
+}
+
+.tabcontent .submit {
+  width: 330px;
+  height: 50px;
+  margin-top: 10px;
+  border: none;
+  background-color: var(--color-black);
+  color: var(--color-white);
+  cursor: pointer;
+}
+
+
+/* 로그인메뉴 */
+.login .loginMenu {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  font-size: 13px;
+  text-align: center;
+  position: relative;
+}
+.login .loginMenu a {
+  flex-grow: 1;
+  padding: 10px 0;
+}
+
+
+
+/* 메뉴 사이선 */
+.login .loginMenu a::after{
+  content: '';
+  display: block;
+  width: 1px;
+  height: 14px;
+  background-color: #767676;
+  position: absolute;
+  top: 10px;
+}
+
+.login .loginMenu a:first-child:after{
+  display: none;
+}
+
+
+
+
+/* 비회원 로그인 */
+
+.non_member_login {
+  display: none;
+}
+.non_member_login_active {
+  display: block;
+}
+
+
+/* sns 계정 */
+
+.sns_login {
+  margin-top: 34px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sns {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.sns a {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 18px;
+  background-position: center;
+}
+.sns .naver {
+  background-color: var(--color-sns-naver);
+  background-image: url(../img/naver-logo.svg);
+}
+
+.sns .kakao {
+  background-color: var(--color-sns-kakao);
+  background-image: url(../img/kakao-logo.svg);
+}
+
+.sns .facebook {
+  background-color: var(--color-sns-facebook);
+  background-image: url(../img/facebook-logo.svg);
+
+}
+
+.sns .apple {
+  background-color: var(--color-sns-apple);
+  background-image: url(../img/apple-logo.svg);
+}
+

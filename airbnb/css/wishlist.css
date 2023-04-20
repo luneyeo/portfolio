@@ -1,0 +1,51 @@
+
+#main .inner {
+  padding-top: 48px;
+}
+.main-title {
+  font-size: 3rem;
+  padding-bottom: 30px;
+  color: var(--color-font-black);
+}
+
+.title {
+  font-size: 2rem;
+  padding-bottom: 12px;
+  color: var(--color-font-black);
+}
+
+.contents {
+  font-size: 1.4rem;
+  padding-bottom: 30px;
+  font-weight: 300;
+}
+
+.signIn-btn {
+  width: 100px;
+  height: 54px;
+  background-color: var(--color-logo);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.signIn-btn span {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+
+
+
+
+/* Footer Mobile */
+#footer-mo .footer-inner .footer-wishlist {
+  color: var(--color-black);
+  opacity: 1;
+}
+#footer-mo .footer-inner .footer-wishlist .material-symbols-outlined {
+  color: var(--color-logo);
+}
+
+
