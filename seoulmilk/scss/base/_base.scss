@@ -1,0 +1,15 @@
+// SWIPER CSS
+@import url("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css");
+
+
+.blind {
+  position: absolute;
+  text-indent: -9999px;
+  font-size: 1.6rem;
+}
+
+.material-symbols-outlined {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

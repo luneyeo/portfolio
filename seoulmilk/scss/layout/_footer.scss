@@ -1,0 +1,113 @@
+footer {
+  border-top: 1px solid $color-border;
+
+  .footer--container {
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 50px 0;
+    display: flex;
+    gap: 70px;
+
+    @include tablet {
+      padding : 50px 40px;
+    }
+    @include mobile {
+      padding: 50px 16px;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    // footer 왼쪽
+    .footer-left {
+      width: calc(100% - 250px);
+      @include mobile {
+        width: 100%;
+      }
+
+      h1 {
+        width: 200px;
+        margin-bottom: 10px;
+
+        @include mobile {
+          margin: 0 auto;
+        }
+        img {
+          width: 100%;
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+        @include mobile {
+          text-align: center;
+          flex-direction: column;
+          gap: 10px;
+          margin-bottom: 36px;
+        }
+        li {
+          position: relative;
+
+          a {
+            display: inline-block;
+            padding-right: 40px;
+            &::after {
+              content: '';
+              width: 1px;
+              height: 14px;
+              background-color: $color-grey;
+              position: absolute;
+              top: 5px;
+              right: 20px;
+              @include mobile {
+                content: none;
+              }
+            }
+
+            @include tablet {
+              padding-right: 40px;
+              font-size: 1.4rem;
+            }
+            @include mobile {
+              padding-right: 0;
+            }
+          }
+          .red {
+            color: $color-green;
+            font-weight: bold;
+          }
+          &:last-child a {
+            &::after {
+              content: none;
+            }
+          }
+        }
+      }
+
+      .co-info {
+        @include mobile {
+          display: none;
+        }
+        p {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    // footer 오른쪽
+    .footer-right {
+      width: 180px;
+      font-weight: bold;
+      @include mobile {
+        text-align: center;
+        font-size: 2.3rem;
+      }
+      .service-numb {
+        color: $color-logo;
+        font-size: 2.3rem;
+      }
+    }
+  }
+}
