@@ -442,20 +442,16 @@
   transform: translateY(50px);
   transition: .5s linear;
 }
-
 .resume-area.fade-in {
   opacity: 1;
   transform: translateY(0px);
 }
-
-
 .resume--inner {
   max-width: 1600px;
   margin: 0 auto;
   padding: 140px 100px 50px;
   position: relative;
 }
-
 .resume--inner .resume--title {
   font-size: 5rem;
   margin-bottom: 80px;
@@ -463,10 +459,89 @@
   letter-spacing: -2px;
   color: var(--color-main);
 }
-.resume--inner .resume--container .resume-item.exp {
+.resume--inner .resume--container .resume-item.skills {
   margin-bottom: 100px;
 }
 
+
+/* 스킬 */
+.resume--container .resume-item .skills-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.resume--container .resume-item .skills-list .skills-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.resume-item .skills-list .skills-list-item .circle {
+  width: 80px;
+  aspect-ratio: 1 / 1;
+  background: no-repeat center;
+  background-size: 80%;
+  transition: all .2s ease;
+}
+
+.resume-item .skills-list .skills-list-item .circle.ps {
+  background-image:url('../img/icon-skills-ps.svg');
+  background-color: #001E36;
+}
+.resume-item .skills-list .skills-list-item .circle.ai {
+  background-image: url('../img/icon-skills-ai.svg');
+  background-color: #330000;
+}
+.resume-item .skills-list .skills-list-item .circle.pr {
+  background-image: url('../img/icon-skills-pr.svg');
+  background-color: #00005B;
+}
+.resume-item .skills-list .skills-list-item .circle.html {
+  background-image: url('../img/icon-skills-html5.svg');
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+.resume-item .skills-list .skills-list-item .circle.css {
+  background-image: url('../img/icon-skills-css3.svg');
+  background-size: 55%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+.resume-item .skills-list .skills-list-item .circle.scss {
+  background-image: url('../img/icon-skills-scss.svg');
+  background-size: 70%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+.resume-item .skills-list .skills-list-item .circle.js {
+  background-image: url('../img/icon-skills-js.svg');
+  background-color: #f7df1e;
+}
+.resume-item .skills-list .skills-list-item .circle.jquery {
+  background-image: url('../img/icon-skills-jquery.png');
+  background-size: 70%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+
+
+@media (hover : hover) {
+  .resume-item .skills-list .skills-list-item .circle:hover {
+    transform: translate(0, -10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .resume-item .skills-list {
+    justify-content: center;
+  }
+}
+
+
+
+
+/* 경력 */
 .resume-item > div {
   margin-bottom: 30px;
   font-size: 3rem;
@@ -477,7 +552,6 @@
   gap: 28px;
 
 }
-
 .resume-item .exp-list .exp-list-item {
   border-radius: 16px;
   display: flex;
@@ -486,9 +560,6 @@
   background-color: var(--color-white);
   box-shadow: var(--color-box-shadow);
 }
-
-
-
 
 /* 경력 윗 부분 */
 .resume-item .exp-list .exp-list-item .item-top {
@@ -636,88 +707,6 @@
     font-size: 2rem;
   }
 }
-
-
-
-
-
-
-
-/* Resume Skills */
-.resume--container .resume-item .skills-list {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.resume--container .resume-item .skills-list .skills-list-item {
-  display: flex;
-  align-items: center;
-}
-
-.resume-item .skills-list .skills-list-item .circle {
-  width: 80px;
-  aspect-ratio: 1 / 1;
-  background: no-repeat center;
-  background-size: 80%;
-  transition: all .2s ease;
-}
-
-.resume-item .skills-list .skills-list-item .circle.ps {
-  background-image:url('../img/icon-skills-ps.svg');
-  background-color: #001E36;
-}
-.resume-item .skills-list .skills-list-item .circle.ai {
-  background-image: url('../img/icon-skills-ai.svg');
-  background-color: #330000;
-}
-.resume-item .skills-list .skills-list-item .circle.pr {
-  background-image: url('../img/icon-skills-pr.svg');
-  background-color: #00005B;
-}
-.resume-item .skills-list .skills-list-item .circle.html {
-  background-image: url('../img/icon-skills-html5.svg');
-  border: 1px solid var(--color-border);
-  background-color: var(--color-white);
-}
-.resume-item .skills-list .skills-list-item .circle.css {
-  background-image: url('../img/icon-skills-css3.svg');
-  background-size: 55%;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-white);
-}
-.resume-item .skills-list .skills-list-item .circle.scss {
-  background-image: url('../img/icon-skills-scss.svg');
-  background-size: 70%;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-white);
-}
-.resume-item .skills-list .skills-list-item .circle.js {
-  background-image: url('../img/icon-skills-js.svg');
-  background-color: #f7df1e;
-}
-.resume-item .skills-list .skills-list-item .circle.jquery {
-  background-image: url('../img/icon-skills-jquery.png');
-  background-size: 70%;
-  border: 1px solid var(--color-border);
-  background-color: var(--color-white);
-}
-
-
-@media (hover : hover) {
-  .resume-item .skills-list .skills-list-item .circle:hover {
-    transform: translate(0, -10px);
-  }
-}
-
-
-@media (max-width: 768px) {
-  .resume-item .skills-list {
-    justify-content: center;
-  }
-}
-
 
 
 
@@ -941,7 +930,7 @@
 
 /* contact 텍스트 영역 */
 #contact .contact--inner {
-  padding: 54px 100px 0px;
+  padding: 54px 100px;
   text-align: center;
 }
 
@@ -966,7 +955,7 @@
 
 @media (max-width: 1380px) {
   #contact .contact--inner {
-    padding: 54px 40px 0px;
+    padding: 54px 40px;
   }
 }
 
@@ -979,7 +968,7 @@
     width: 100%;
   }
   #contact .contact--inner {
-    padding: 40px 40px 0;
+    padding: 40px;
   }
   #contact .contact--inner .email {
     margin: 10px 0;
@@ -1002,36 +991,35 @@
 .footer--inner {
   max-width: 1600px;
   margin: 0 auto;
-  padding: 40px 100px;
+  padding: 0px 100px 40px;
 }
 .footer--inner ul {
   display: flex;
 }
 .footer--inner ul li {
   width: 60px;
+  height: 40px;
 }
 .footer--inner a {
   display: inline-block;
   width: 100%;
-  aspect-ratio: 1 / 1;
+  height: 100%;
   background: url("/img/github.svg") no-repeat center;
-  background-size: 80%;
+  background-size: 100%;
   transition: .2s linear;
 }
 
-@media (hover: hover) {
-  .footer--inner a:hover {
-    background-size: 85%;
-  }
-}
 @media (max-width: 1380px) {
   #footer .footer--inner {
-    padding: 40px 40px;
+    padding: 0px 40px 40px;
+  }
+  .footer--inner ul li {
+    width: 50px;
   }
 }
 @media (max-width: 768px) {
   #footer .footer--inner {
-    padding: 24px 40px;
+    padding: 0px 40px 24px;
   }
   .footer--inner ul {
     justify-content: center;
