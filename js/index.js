@@ -1,5 +1,4 @@
 // 시작
-
 const loading = document.querySelector('.loading')
 const headerFadeIn = document.querySelector('.header--inner')
 const keywordFadeIn = document.querySelector('.about--inner .about--keyword')
