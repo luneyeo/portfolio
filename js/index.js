@@ -1,16 +1,20 @@
-
 // 시작
-const start = document.querySelector('.loading')
+
+const loading = document.querySelector('.loading')
 const headerFadeIn = document.querySelector('.header--inner')
 const keywordFadeIn = document.querySelector('.about--inner .about--keyword')
 
-function hidden() {start.classList.add('hidden')}
+function hidden() {
+  loading.classList.add('hidden')
+  document.documentElement.classList.remove('fixed')
+}
 function fadeInTitle (){headerFadeIn.classList.add('fade-in')}
 function fadeInKeyword (){keywordFadeIn.classList.add('fade-in')}
 
-setTimeout(hidden, 100)
-setTimeout(fadeInTitle, 2000)
-setTimeout(fadeInKeyword, 1000)
+setTimeout(hidden, 3500)
+setTimeout(fadeInTitle, 3700)
+setTimeout(fadeInKeyword, 4000)
+
 
 
 

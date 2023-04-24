@@ -9,8 +9,78 @@
   transition: .7s linear;
 }
 .loading.hidden {
-  height: 0;
+  opacity: 0;
+  visibility: hidden;
 }
+.load {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  animation: scale-small .5s linear 2.2s forwards;
+}
+.circle-stroke {
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 455;
+  stroke-dashoffset: 455;
+  transform:rotate(-90deg);
+  animation:circle-stroke 2s cubic-bezier(0.83,-0.01, 0.21, 0.98) forwards;
+}
+
+
+@keyframes circle-stroke {
+  0% {
+    stroke-dashoffset: 455;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes scale-small {
+  0% {
+    width: 80px;
+  }
+  100% {
+    width : 0px;
+  }
+}
+
+
+.circle-big {
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%, -50%);
+  animation: scale-big 1s linear 2.7s forwards;
+
+
+}
+
+@keyframes scale-big {
+  0% {
+    width: 0vmax;
+    height: 0vmax;
+  }
+  100% {
+    width: 160vmax;
+    height: 160vmax;
+  }
+}
+
+
+
+
+
+
+
 
 
 
