@@ -109,7 +109,7 @@ function message() {
 
 
 // 디자인 작업물 모달창
-const designModalOpenBtn = document.querySelectorAll('#d li .list-btn')
+const designModalOpenBtn = document.querySelectorAll('#d .list-btn')
 const designModalCloseBtn = document.querySelectorAll('.design--modal .icon-close span.material-symbols-outlined')
 const designModalEls = document.querySelectorAll('.design--modal')
 const shadowBg = document.querySelector('.modal-bg')
