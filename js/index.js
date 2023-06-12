@@ -101,6 +101,7 @@ for (var i = 0; i < tabList.length; i++) {
 // 작업 중 알림창
 function message() {
   alert("작업 중입니다! 조금만 기다려주세요 :)")
+  // onclick="javascript:message()"
 }
 
 
