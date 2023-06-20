@@ -881,15 +881,15 @@
   z-index: 3;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: var(--color-white);
   background-color: var(--color-main);
   font-size: 1.7rem;
   line-height: 140%;
   opacity: 0;
   transition: all .5s ease;
-  padding: 24% 6% 20%;
+  padding: 24% 6% 12%;
   box-sizing: border-box;
-  justify-content: space-between;
 }
 
 .list-bg span:first-child {
@@ -955,7 +955,7 @@
     opacity: 1;
     font-size: 2vw;
     line-height: 130%;
-    padding: 20% 5% 15%;
+    padding: 20% 5% 12%;
   }
   .list-bg span:first-child {
     font-size: 3vw;
