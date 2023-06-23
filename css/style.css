@@ -900,13 +900,13 @@
 
 .portfolio-list .item .list-btn img {
   width: 100%;
-  transition: all .6s ease;
+  transition: all .4s ease;
 }
 
 /* 포트폴리오 리스트 호버시 */
 @media (hover: hover) {
   .list-btn:hover img {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
   .item .list-btn:hover .list-bg {
     opacity: 1;
