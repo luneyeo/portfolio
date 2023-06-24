@@ -4,7 +4,7 @@ const headerFadeIn = document.querySelector('.header--inner')
 const keywordFadeIn = document.querySelector('.about--inner .about--keyword')
 
 function hidden() {
-  loading.classList.add('hidden')
+  loading.remove()
   document.documentElement.classList.remove('fixed')
 }
 function fadeInTitle (){headerFadeIn.classList.add('fade-in')}
