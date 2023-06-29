@@ -1013,17 +1013,17 @@
 }
 
 #contact .contact--inner .email {
-  margin: 20px 0;
-  padding: 0;
-  background-color: transparent;
+  margin: 20px auto;
 }
 #contact .contact--inner .email a {
+  /* display: inline-block; */
   font-size: 3rem;
   color: var(--color-white);
-  display: inline-block;
   border-bottom: 2px solid transparent;
   transition: .3s linear;
 }
+
+
 
 @media (hover: hover) {
   #contact .contact--inner .email a:hover {
@@ -1048,13 +1048,11 @@
   #contact .contact--inner {
     padding: 40px;
   }
-  #contact .contact--inner .email {
-    margin: 10px 0;
-  }
   #contact .contact--inner .email a {
     display: inline;
     font-size: 2rem;
     padding-bottom: 0px;
+    margin: 10px 0;
   }
 }
 
