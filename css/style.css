@@ -619,28 +619,63 @@
   font-size: 3rem;
 }
 .resume-item .exp-list {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
 }
 .resume-item .exp-list .exp-list-item {
-  border-radius: 16px;
+  border-radius: 26px;
   display: flex;
+  flex-direction: column;
   padding: 30px;
   box-sizing: border-box;
   background-color: var(--color-white);
-  box-shadow: var(--color-box-shadow);
+  box-shadow: 0 0 15px rgba(0,0,0,.1);
+
+  transition: all .3s ease-in-out;
+  transform-origin: bottom center;
 }
+
+
+/* 경력 부분에 페이드 인 됐을 때 애니메이션 실행 */
+.resume-area.fade-in .exp-list-item {
+  animation: expList .7s linear .8s 1 alternate both;
+}
+
+@keyframes expList {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(0.5deg);
+  }
+  40% {
+    transform: rotate(-0.5deg);
+  }
+  60% {
+    transform: rotate(0.5deg);
+  }
+  80% {
+    transform: rotate(-0.5deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+
 
 /* 경력 윗 부분 */
 .resume-item .exp-list .exp-list-item .item-top {
-  min-width: 400px;
+  min-height: 90px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  margin: 0 60px 0 0;
-  gap: 24px;
-  border-right: 2px solid var(--color-border);
+
+  padding: 0 0 22px 0;
+  margin: 0 0 26px 0;
+  border-right: none;
+  border-bottom: 2px solid var(--color-border);
 }
 
 .item-top .item-top-icon {
@@ -648,6 +683,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 .item-top .item-top-icon img {
   width: 100%;
@@ -655,31 +691,30 @@
 .item-top .item-top-txt {
   font-size: 2rem;
   font-weight: 500;
-  flex-grow: 1;
+  text-align: center;
 }
 .item-top .item-top-txt .date {
   color: var(--color-grey);
   font-weight: 400;
   font-size: 1.6rem;
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
 
 /* 경력 아래 부분 */
 .item-bottom {
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
-  gap: 5px;
 }
 .item-bottom li {
   min-height: 40px;
   display: flex;
   word-break: keep-all;
   font-size: 1.7rem;
+  margin-bottom: 8px;
 }
 .item-bottom li:last-child {
-  padding-bottom: 0 ;
+  margin-bottom: 0;
 }
 .item-bottom li .icon-emoji {
   margin-right: 10px;
@@ -692,7 +727,6 @@
 
 .item-bottom li p {
   line-height: 150%;
-  flex-grow: 1;
 }
 
 
@@ -703,65 +737,22 @@
   }
 }
 
-
-@media (max-width: 1200px) {
-  .resume-item .exp-list .exp-list-item .item-top {
-    min-width: 350px;
-    margin: 0 36px 0 0;
-  }
-}
-
 @media (max-width: 900px) {
-  .resume-item .exp-list .exp-list-item {
-    padding: 26px;
-  }
-  .resume-item .exp-list .exp-list-item .item-top {
-    gap: 10px;
-    min-width: 260px;
-    flex-direction: column;
-    justify-content: center;
-    padding: 0 22px 0 0;
-    margin: 0 26px 0 0;
-  }
-  .item-top .item-top-txt {
-    text-align: center;
-    flex-grow: inherit;
-  }
-}
-
-@media (max-width: 768px) {
   .resume-item .exp-list {
     grid-template-columns: 1fr;
-    gap: 28px;
+    gap: 0;
   }
   .resume-item .exp-list .exp-list-item {
     flex-direction: column;
-  }
-  .resume-item .exp-list .exp-list-item .item-top {
-    min-height: 90px;
-    gap : 10px;
-    flex-direction: column;
-
-    padding: 0 0 22px 0;
-    margin: 0 0 26px 0;
-    border-right: none;
-    border-bottom: 2px solid var(--color-border);
-  }
-  .item-top .item-top-icon {
-    width: 40px;
+    margin-bottom: 28px;
   }
 
   .item-top .item-top-txt {
-    width:100%;
-    text-align: center;
     font-size: 2.3rem;
   }
   .item-top .item-top-txt .date {
     font-size: 1.8rem;
     margin-bottom: 8px;
-  }
-  .item-bottom {
-    gap: 8px;
   }
 }
 
